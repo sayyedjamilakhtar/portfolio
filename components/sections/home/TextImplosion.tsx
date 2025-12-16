@@ -82,7 +82,7 @@ const TextImplosion: React.FC = () => {
   }, []);
 
   // Helper to split text into spans while preserving spaces
-  const splitText = content.split("").map<JSX.Element>((char, index) => (
+  const splitText = content.split("").map((char, index) => (
     <span
       key={index}
       className="char"
