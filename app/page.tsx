@@ -8,8 +8,8 @@ export default function Home() {
     <>
       <Hero />
       <TextImplosion />
-      {/* <About /> */}
-      {/* <Contact /> */}
+      <About />
+      <Contact />
     </>
   );
 }

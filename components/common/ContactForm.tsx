@@ -23,7 +23,7 @@ export default function ContactForm() {
           />
           <textarea
             rows={5}
-            placeholder="Discuss your project..."
+            placeholder="How may i help you?"
             className="text-[1vw]  border-b-1 py-3 focus:outline-0"
           />
           {/* <button className="">Let's build a great website</button> */}
