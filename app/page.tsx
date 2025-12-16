@@ -1,7 +1,15 @@
+import Hero from "@/components/sections/home/Hero";
+import TextImplosion from "@/components/sections/home/TextImplosion";
+import About from "@/components/sections/home/About";
+import Contact from "@/components/sections/home/contact";
+
 export default function Home() {
   return (
     <>
-      <h1 className="h-screen bg-red-300">Homepage</h1>
+      <Hero />
+      {/* <TextImplosion /> */}
+      {/* <About /> */}
+      {/* <Contact /> */}
     </>
   );
 }
