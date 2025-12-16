@@ -5,9 +5,9 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const TextImplosion = () => {
-  const containerRef = useRef(null);
-  const textRef = useRef(null);
+const TextImplosion: React.FC = () => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const textRef = useRef<HTMLParagraphElement | null>(null);
 
   // The text content
   // const content =
@@ -16,17 +16,22 @@ const TextImplosion = () => {
   const content: string = `Hi, I’m Jamil Akhtar, a Frontend Developer and Designer working with startups, agencies, and growing businesses worldwide. Over the years, I’ve partnered with global brands, B2B SaaS companies, founders and teams to turn ideas into fast, scalable, and user-focused web experiences, I partner with businesses to shape unique brands, craft digital products, and create standout experiences that drive impact.`;
 
   useLayoutEffect(() => {
+    const container = containerRef.current;
+    const textElement = textRef.current;
+
+    if (!container || !textElement) return;
+
     const ctx = gsap.context(() => {
       // 1. Select all the individual character spans
-      const chars = textRef.current.querySelectorAll(".char");
+      const chars = textElement.querySelectorAll<HTMLSpanElement>(".char");
 
       // 2. Define our "Solar System" Rings (Radii in pixels)
-      const rings = [150, 350, 550, 750];
+      const rings: number[] = [150, 350, 550, 750];
 
       // 3. Create the Timeline
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: containerRef.current,
+          trigger: container,
           start: "top top", // Animation starts when top of container hits top of viewport
           end: "+=2000", // The scroll distance over which the animation plays
           scrub: 1.5, // Smooth scrubbing effect (1.5s lag)
@@ -39,12 +44,12 @@ const TextImplosion = () => {
         chars,
         {
           // LOGIC: Randomly assign each char to a ring and calculate position
-          x: (i) => {
+          x: (i: number) => {
             const ringRadius = rings[i % rings.length]; // Distribute evenly across rings
             const angle = Math.random() * Math.PI * 2; // Random angle (0 to 360)
             return Math.cos(angle) * ringRadius; // Polar to Cartesian X
           },
-          y: (i) => {
+          y: (i: number) => {
             const ringRadius = rings[i % rings.length];
             const angle = Math.random() * Math.PI * 2;
             return Math.sin(angle) * ringRadius; // Polar to Cartesian Y
@@ -71,13 +76,13 @@ const TextImplosion = () => {
           ease: "power3.out",
         }
       );
-    }, containerRef);
+    }, container);
 
     return () => ctx.revert();
   }, []);
 
   // Helper to split text into spans while preserving spaces
-  const splitText = content.split("").map((char, index) => (
+  const splitText = content.split("").map<JSX.Element>((char, index) => (
     <span
       key={index}
       className="char"
