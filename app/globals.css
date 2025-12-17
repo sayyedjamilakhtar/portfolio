@@ -16,7 +16,8 @@
   --text-fluid-lg: clamp(4rem, 12vw, 12vw);
 
   --text-body-sm: clamp(0.5rem, 1vw, 1vw);
-  --text-body-md: clamp(1rem, 2vw, 2vw);
+  --text-body-md: clamp(1rem, 1.5vw, 1.5vw);
+  --text-body-lg: clamp(2rem, 2vw, 2vw);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -61,4 +62,24 @@ h6 {
 
 .lenis.lenis-stopped {
   overflow: hidden;
+}
+
+.underline-animate {
+  transform: scaleX(1);
+  transition: transform 0s;
+}
+
+.group:hover .underline-animate {
+  transform: scaleX(0);
+  transition: transform 0s;
+  animation: underline-expand 0.5s ease-out 0s forwards;
+}
+
+@keyframes underline-expand {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }

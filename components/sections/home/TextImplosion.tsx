@@ -2,6 +2,7 @@
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { RiArrowDownLine } from "react-icons/ri";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -99,10 +100,20 @@ const TextImplosion: React.FC = () => {
   return (
     <div
       id="about"
-      className="relative w-full bg-neutral-900 text-white overflow-hidden"
+      className="pt-[6vh] relative w-full bg-neutral-900 text-white overflow-hidden"
     >
       {/* The Animation Container */}
       <div className="w-[95%] m-auto">
+        <div className="absolute pt-[6vh] right-10 flex flex-col items-center">
+          <p
+            className="text-body-sm uppercase"
+            style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
+          >
+            Scroll Down
+          </p>
+          <span className="w-[2px] h-[70px] bg-white mt-[20px] mb-[-10px]"></span>
+          <RiArrowDownLine className="text-body-sm text-white" />
+        </div>
         <h1 className="text-fluid font-bold">About Me</h1>
       </div>
       <div
