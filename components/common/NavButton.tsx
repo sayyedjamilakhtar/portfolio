@@ -11,11 +11,11 @@ export default function NavButton({ className = "" }: NavButtonProps) {
   return (
     <Link href="/#contact">
       <button
-        className={`relative group cursor flex items-center gap-5 uppercase text-[1vw] ${className}`}
+        className={`relative group cursor flex items-center gap-[1vw] uppercase text-[1vw] ${className}`}
       >
         Get in touch
         <GoArrowRight className="text-[1.2vw] transition-all group-hover:rotate-[-45deg]" />
-        <div className="absolute transition-all duration-300 bottom-[-5] w-[36%] h-2 bg-neutral-900 group-hover:w-[100%]"></div>
+        <div className="absolute transition-all duration-300 bottom-[-0.5vh] w-[36%] h-[0.5vh] bg-neutral-900 group-hover:w-[100%]"></div>
       </button>
     </Link>
   );

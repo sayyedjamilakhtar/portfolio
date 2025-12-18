@@ -16,7 +16,7 @@ export default function Navbar() {
               </span>
               Jamil
               <span className="font-light"> Akhtar</span>
-              <div className="w-[5.2vw] h-3 bg-neutral-300 absolute right-0 bottom-[-5]"></div>
+              <div className="w-[5.2vw] h-[0.8vh] bg-neutral-300 absolute right-0 bottom-[-0.3vh]"></div>
             </h1>
           </Link>
 
