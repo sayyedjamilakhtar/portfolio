@@ -46,9 +46,9 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="mt-20">
+    <div className="mt-[7vh]">
       <form onSubmit={handleSubmit} className="max-w-[30vw] m-auto">
-        <div className="flex flex-col gap-20">
+        <div className="flex flex-col gap-[6vh]">
           <input
             type="text"
             id="name"
@@ -56,7 +56,7 @@ export default function ContactForm() {
             value={contactInfo.name}
             onChange={handleChange}
             required
-            className="text-[1vw] border-b-1 py-3 focus:outline-0"
+            className="text-[1vw] border-b-1 py-[1.1vh] focus:outline-0"
           />
           <input
             type="text"
@@ -64,7 +64,7 @@ export default function ContactForm() {
             placeholder="Phone"
             value={contactInfo.phone}
             onChange={handleChange}
-            className="text-[1vw] border-b-1 py-3 focus:outline-0"
+            className="text-[1vw] border-b-1 py-[1.1vh] focus:outline-0"
           />
           <input
             type="email"
@@ -73,7 +73,7 @@ export default function ContactForm() {
             value={contactInfo.email}
             onChange={handleChange}
             required
-            className="text-[1vw] border-b-1 py-3 focus:outline-0"
+            className="text-[1vw] border-b-1 py-[1.1vh] focus:outline-0"
           />
           <textarea
             rows={5}
@@ -81,7 +81,7 @@ export default function ContactForm() {
             placeholder="How may i help you?"
             value={contactInfo.message}
             onChange={handleChange}
-            className="text-[1vw]  border-b-1 py-3 focus:outline-0"
+            className="text-[1vw]  border-b-1 py-[1.1vh] focus:outline-0"
           />
           {/* <button className="">Let's build a great website</button> */}
           <FormButon />

@@ -14,7 +14,7 @@ const TextImplosion: React.FC = () => {
   // const content =
   //   "In the beginning, the letters floated in the void, bound only by gravity and orbit. As the observer moves forward, chaos aligns into order, and the scattered fragments of thought coalesce into a single, coherent reality. This is the power of the text implosion.";
 
-  const content: string = `Hi, I’m Jamil Akhtar, a Frontend Developer and Designer working with startups, agencies, and growing businesses worldwide. Over the years, I’ve partnered with global brands, B2B SaaS companies, founders and teams to turn ideas into fast, scalable, and user-focused web experiences, I partner with businesses to shape unique brands, craft digital products, and create standout experiences that drive impact.`;
+  const content: string = `Hi, I’m Jamil Akhtar, a Frontend Developer and Designer working with startups, agencies, and growing businesses worldwide. Over  the years, I’ve partnered with the global brands, B2B SaaS companies, founders and teams to turnideas into fast, scalable, and user-focu-sed web experie-nces, I partner with businesses to shape unique brands,   craft digital products, and create standout experiences    that drive impact.`;
 
   useLayoutEffect(() => {
     const container = containerRef.current;
@@ -120,11 +120,11 @@ const TextImplosion: React.FC = () => {
         ref={containerRef}
         className="h-screen w-full flex items-center justify-center overflow-hidden"
       >
-        <div className="max-w-[80vw] px-4 perspective-1200">
+        <div className="max-w-[79vw] perspective-1400">
           <p
             ref={textRef}
-            className="text-[2.8vw] font-light leading-tight text-left"
-            style={{ perspective: "1200px" }} // Adds 3D depth context
+            className="text-[2.9vw] font-light leading-tight text-left"
+            style={{ perspective: "1400px" }} // Adds 3D depth context
           >
             {splitText}
           </p>
