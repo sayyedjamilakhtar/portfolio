@@ -11,7 +11,8 @@ export default function contact() {
         </h3>
         <p className="text-body-sm max-w-[38vw] m-auto">
           I’d love to hear more about your project. Whether you need help with
-          branding, web design, or optimization, let’s start a conversation.
+          branding, web design & development, or optimization, let’s start a
+          conversation.
         </p>
       </div>
 
