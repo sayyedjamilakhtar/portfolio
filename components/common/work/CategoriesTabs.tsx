@@ -28,7 +28,7 @@ export default function CategoriesTabs({
   };
 
   return (
-    <div className="w-[95%] m-auto pb-[5vh]">
+    <div className="pb-[5vh]">
       <div className="flex flex-wrap gap-[1vw]">
         <button
           onClick={handleClick}
