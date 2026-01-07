@@ -114,7 +114,7 @@ const TextImplosion: React.FC = () => {
           <span className="w-[2px] h-[70px] bg-white mt-[20px] mb-[-10px]"></span>
           <RiArrowDownLine className="text-body-sm text-white" />
         </div>
-        <h1 className="text-fluid font-bold">About Me</h1>
+        <h2 className="text-fluid font-bold">About Me</h2>
       </div>
       <div
         ref={containerRef}

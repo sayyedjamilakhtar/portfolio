@@ -3,13 +3,14 @@ import NavButton from "./NavButton";
 import PhoneMenu from "./PhoneMenu";
 import Link from "next/link";
 import { NavLink } from "@/constant/constant";
+import HoverLink from "./HoverLink";
 
 export default function Navbar() {
   return (
     <>
       <div className="py-[3vh] fixed top-0 left-0 w-full bg-neutral-100/95 z-999999">
         <div className="flex items-center justify-between w-[95%] m-auto">
-          <Link href="/">
+          <Link href="/#home">
             <h1 className="group text-[1.5vw] font-medium uppercase tracking-tight relative">
               <span className="text-[1vw] text-neutral-400 absolute top-[-2vh]">
                 Sayyed
@@ -25,7 +26,7 @@ export default function Navbar() {
             {NavLink.map((link) => {
               return (
                 <Link key={link.id} href={link.url}>
-                  <li>{link.label}</li>
+                  <HoverLink>{link.label}</HoverLink>
                 </Link>
               );
             })}
@@ -33,7 +34,7 @@ export default function Navbar() {
               href="https://resume.almagrow.com/sayyedjamilakhtar/jamil-copy"
               target="blank"
             >
-              <li>Resume</li>
+              <HoverLink>Resume</HoverLink>
             </a>
           </ul>
 

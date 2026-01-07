@@ -23,14 +23,25 @@ export type ProjectCategories = {
 };
 
 export type Project = {
+  id: string;
   title: string;
-  featuredImage: FeaturedImage | null;
-  projectCategories: ProjectCategories;
+  featuredImage?: FeaturedImage | null;
+  projectCategories?: ProjectCategories;
 };
 
 export type ProjectsResponse = {
-  projects: {
-    pageInfo: PageInfo;
-    nodes: Project[];
+  data: {
+    projects: {
+      pageInfo: PageInfo;
+      nodes: Project[];
+    };
+  };
+};
+
+export type CategoryResponse = {
+  data: {
+    projectCategories: {
+      nodes: Category[];
+    };
   };
 };

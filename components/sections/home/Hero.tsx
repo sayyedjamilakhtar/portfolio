@@ -5,7 +5,7 @@ import { GoArrowRight } from "react-icons/go";
 export default function Hero() {
   return (
     <>
-      <div className="pb-[8vh] pt-[22vh] relative bg-neutral-100">
+      <div id="home" className="pb-[8vh] pt-[22vh] relative bg-neutral-100">
         <div className="w-[95%] m-auto">
           <h1 className="text-fluid-lg font-bold leading-[20vh] tracking-tight relative z-3">
             Creative Developer

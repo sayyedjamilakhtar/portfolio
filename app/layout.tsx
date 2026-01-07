@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "../components/common/Navbar";
 import SmoothScroll from "@/components/common/SmoothScroll";
 import Footer from "@/components/common/Footer";
+import Providers from "./Providers";
 
 const fontHeading = Poppins({
   subsets: ["latin"],
@@ -44,11 +45,13 @@ export default function RootLayout({
       <body
         className={`${fontHeading.variable} ${fontBody.variable} antialiased`}
       >
-        <SmoothScroll>
-          <Navbar />
-          {children}
-          <Footer />
-        </SmoothScroll>
+        <Providers>
+          <SmoothScroll>
+            <Navbar />
+            {children}
+            <Footer />
+          </SmoothScroll>
+        </Providers>
       </body>
     </html>
   );
