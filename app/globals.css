@@ -10,14 +10,14 @@
   --color-foreground: var(--foreground);
   /* --font-poppins: var(--font-poppins-sans); */
   --font-poppins: var(--font-poppins);
-  --text-fluid: clamp(2rem, 8vw, 8vw);
+  --text-fluid: clamp(3rem, 8vw, 8vw);
   --text-fluid-sm: clamp(2rem, 3vw, 3vw);
-  --text-fluid-md: clamp(2rem, 6vw, 6vw);
-  --text-fluid-lg: clamp(4rem, 12vw, 12vw);
-
-  --text-body-sm: clamp(0.5rem, 1vw, 1vw);
-  --text-body-md: clamp(1rem, 1.5vw, 1.5vw);
-  --text-body-lg: clamp(1rem, 2vw, 2vw);
+  --text-fluid-md: clamp(2.7rem, 6vw, 6vw);
+  --text-fluid-lg: clamp(5rem, 12vw, 12vw);
+  
+  --text-body-sm: clamp(1rem, 1vw, 1vw);
+  --text-body-md: clamp(1.5rem, 1.5vw, 1.5vw);
+  --text-body-lg: clamp(2rem, 2vw, 2vw);
 }
 
 @media (prefers-color-scheme: dark) {

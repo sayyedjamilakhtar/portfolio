@@ -1,12 +1,12 @@
 "use client";
-import { useAppSelector } from "@/redux/hooks";
+import { useAppSelector } from "@/store/hooks";
 // import { useSelector } from "react-redux";
-import CategoriesTabs from "@/components/common/work/CategoriesTabs";
-import { Project } from "@/lib/types";
+import CategoriesTabs from "@/components/sections/work/CategoriesTabs";
+import { Project } from "@/lib/types/types";
 import {
   useGetProjectsQuery,
   useGetCategoriesQuery,
-} from "@/redux/features/projectApiSlice";
+} from "@/store/features/projectApiSlice";
 import Image from "next/image";
 
 export default function ProjectsGrid() {
@@ -65,21 +65,26 @@ export default function ProjectsGrid() {
         : "";
 
       return (
-        <div key={project.id} className="">
-          <div className="w-[20vw] h-[45vh] m-auto overflow-hidden relative group flex justify-center items-center">
+        <div
+          key={project.id}
+          className="p-5 bg-white border-1 border-neutral-200 rounded-xl hover:shadow-2xl transition-all"
+        >
+          <div className="w-[100%] h-[45vh] m-auto overflow-hidden relative group flex justify-center items-center">
             {imagePath && (
               <Image
-                className="absolute w-auto h-auto top-0 group-hover:-translate-y-[calc(100%-45vh)] transition duration-1200"
+                className="absolute w-[100%] h-auto top-0 group-hover:-translate-y-[calc(100%-45vh)] transition duration-1200"
                 src={imagePath}
-                width={500}
-                height={500}
+                width={800}
+                height={800}
                 alt={project.featuredImage?.node.altText || project.title}
                 loading="eager"
               />
             )}
           </div>
 
-          <h1 className="text-body-sm">{project.title}hello there</h1>
+          <h1 className="text-body-sm mt-[2vh] font-semibold">
+            {project.title}
+          </h1>
         </div>
       );
     });
@@ -87,9 +92,9 @@ export default function ProjectsGrid() {
 
     return (
       <div>
-        <div className="w-[95%] m-auto">
+        <div className="w-[95%] m-auto pb-[10vh]">
           <CategoriesTabs categories={categories || []} />
-          <div className="grid grid-cols-4 gap-[1vw] justify-center m-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-[1.5vw] justify-center m-auto">
             {projectList}
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import ExperienceTimeline from "@/components/common/ExperienceTimeline";
+import ExperienceTimeline from "@/components/sections/home/ExperienceTimeline";
 
 export default function About() {
   return (

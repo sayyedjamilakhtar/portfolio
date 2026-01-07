@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import FormButon from "./FormButon";
+import FormButon from "@/components/ui/FormButon";
 
 export default function ContactForm() {
   type contactProps = {

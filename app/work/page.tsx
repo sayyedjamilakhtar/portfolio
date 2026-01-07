@@ -10,9 +10,7 @@ export default async function page() {
         </h1>
       </div>
 
-      <div className="flex flex-wrap gap-10 justify-center m-auto">
-        <Projects />
-      </div>
+      <Projects />
     </div>
   );
 }

@@ -1,8 +1,8 @@
 "use client";
-import { Category } from "@/lib/types";
+import { Category } from "@/lib/types/types";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { updateCategory } from "@/redux/features/activeCategorySlice";
+import { updateCategory } from "@/store/features/activeCategorySlice";
 
 export default function CategoriesTabs({
   categories,
@@ -25,6 +25,10 @@ export default function CategoriesTabs({
     } else {
       setActiveCategory((e.target as HTMLElement).textContent);
     }
+
+    // if ((e.target as HTMLElement).textContent == activeCategory) {
+    //   console.log("active");
+    // }
   };
 
   return (
@@ -32,7 +36,9 @@ export default function CategoriesTabs({
       <div className="flex flex-wrap gap-[1vw]">
         <button
           onClick={handleClick}
-          className="text-body-sm bg-white py-[2vh] px-[2vw] rounded-full"
+          className={`${
+            activeCategory == "All" ? "text-white bg-neutral-900" : "bg-white"
+          }  text-body-sm  py-[1vh] lg:py-[2vh] px-[5vw] lg:px-[2vw] !rounded-full`}
         >
           All
         </button>
@@ -41,7 +47,11 @@ export default function CategoriesTabs({
             <button
               key={list.slug}
               onClick={handleClick}
-              className="text-body-sm bg-white py-[2vh] px-[2vw] rounded-full"
+              className={`${
+                activeCategory == list.name
+                  ? "text-white bg-neutral-900"
+                  : "bg-white"
+              }  text-body-sm  py-[1vh] lg:py-[2vh] px-[5vw] lg:px-[2vw] !rounded-full`}
             >
               {list.name}
             </button>

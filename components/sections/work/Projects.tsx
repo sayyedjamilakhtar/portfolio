@@ -1,10 +1,12 @@
-import ProjectsGrid from "@/components/common/work/ProjectsGrid";
+import ProjectsGrid from "@/components/sections/work/ProjectsGrid";
 
 export default async function Projects() {
   return (
     <>
       <div className="bg-neutral-100">
-        <ProjectsGrid />
+        <div className="">
+          <ProjectsGrid />
+        </div>
       </div>
     </>
   );

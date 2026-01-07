@@ -5,7 +5,7 @@ import { GrMenu } from "react-icons/gr";
 export default function PhoneMenu() {
   const [showPhoneMenu, setShowPhoneMenu] = useState(false);
   return (
-    <div className=" xl:hidden">
+    <div className=" lg:hidden">
       <button
         onClick={() => {
           setShowPhoneMenu(true);

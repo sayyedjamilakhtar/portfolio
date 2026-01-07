@@ -1,12 +1,12 @@
 "use client";
-import { useAppSelector } from "@/redux/hooks";
+import { useAppSelector } from "@/store/hooks";
 // import { useSelector } from "react-redux";
-import CategoriesTabs from "@/components/common/work/CategoriesTabs";
-import { Project } from "@/lib/types";
+import CategoriesTabs from "@/components/sections/work/CategoriesTabs";
+import { Project } from "@/lib/types/types";
 import {
   useGetProjectsQuery,
   useGetCategoriesQuery,
-} from "@/redux/features/projectApiSlice";
+} from "@/store/features/projectApiSlice";
 import Image from "next/image";
 
 export default function About() {

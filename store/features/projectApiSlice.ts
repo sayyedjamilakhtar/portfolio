@@ -3,7 +3,7 @@ import {
   CategoryResponse,
   Project,
   Category,
-} from "@/lib/types";
+} from "@/lib/types/types";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const projectsApi = createApi({

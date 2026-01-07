@@ -7,7 +7,7 @@ export default function Hero() {
     <>
       <div id="home" className="pb-[8vh] pt-[22vh] relative bg-neutral-100">
         <div className="w-[95%] m-auto">
-          <h1 className="text-fluid-lg font-bold leading-[20vh] tracking-tight relative z-3">
+          <h1 className="text-fluid-lg font-bold leading-[10vh] lg:leading-[20vh] tracking-tight relative z-3">
             Creative Developer
           </h1>
           <p className="text-body-sm mt-[2vh] text-right text-neutral-500 uppercase tracking-[1.5vw] relative z-4">
@@ -15,7 +15,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="w-[32vw] h-[35vh] bg-neutral-200  absolute right-[15vw] bottom-[12.5vh] z-1"></div>
+        <div className="w-40 lg:w-[32vw] h-40 lg:h-[35vh] bg-neutral-200  absolute right-[15vw] bottom-[12.5vh] z-1"></div>
         <Image
           className="absolute right-[10vw] bottom-[43vh] w-[20vw] z-2"
           src="/images/jamilAkhtar.png"

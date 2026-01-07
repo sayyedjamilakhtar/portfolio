@@ -1,5 +1,5 @@
 import React from "react";
-import HoverLink from "./HoverLink";
+import HoverLink from "../ui/HoverLink";
 
 export default function Footer() {
   return (
