@@ -6,6 +6,7 @@ import SmoothScroll from "@/components/layout/SmoothScroll";
 import Footer from "@/components/layout/Footer";
 import Providers from "./Providers";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const fontHeading = Poppins({
   subsets: ["latin"],
@@ -51,6 +52,7 @@ export default function RootLayout({
             <Navbar />
             {children}
             <Analytics />
+            <SpeedInsights />
             <Footer />
           </SmoothScroll>
         </Providers>
