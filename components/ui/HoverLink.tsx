@@ -8,7 +8,7 @@ interface HoverLinkProps {
   children: string;
 }
 
-const HoverLink: React.FC<HoverLinkProps> = ({ children }) => {
+const HoverLink: React.FC<HoverLinkProps> = ({ children }: HoverLinkProps) => {
   // 1. Type the ref as an HTMLAnchorElement
   const container = useRef<HTMLAnchorElement>(null);
 
