@@ -1,4 +1,5 @@
 "use client";
+import { FaWordpress } from "react-icons/fa6";
 
 import React, { useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
@@ -46,14 +47,14 @@ export default function ExperienceTimeline() {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const track = trackRef.current;
-      const cards = gsap.utils.toArray(".timeline-card");
+      const cards = gsap.utils.toArray<HTMLElement>(".timeline-card");
 
       if (!track) return;
 
       // Calculate scroll amount
       // We scroll exactly enough so the last item (which has right padding) hits the center
       const getScrollAmount = () => {
-        let trackWidth = track.scrollWidth;
+        const trackWidth = track.scrollWidth;
         return -(trackWidth - window.innerWidth);
       };
 
@@ -72,7 +73,7 @@ export default function ExperienceTimeline() {
       });
 
       // Animation for items appearing
-      cards.forEach((card: any) => {
+      cards.forEach((card) => {
         gsap.from(card, {
           y: "5vh", // Relative movement
           opacity: 0,
@@ -129,24 +130,38 @@ export default function ExperienceTimeline() {
                   !isTop && "order-3 mt-[2vh]"
                 } relative`}
               >
-                <span className="text-[6vw] leading-none font-bold text-white/10 mb-[1vh] block">
+                <span
+                  className="text-[6vw] leading-none font-bold text-white/10 mb-[1vh] block"
+                  style={
+                    {
+                      WebkitTextStroke: "1px rgba(255, 255, 255, 0.2)",
+                      color: "transparent",
+                    } as React.CSSProperties
+                  }
+                >
                   {item.year}
                 </span>
-                <h3 className="text-[1.8vw] font-light mb-[1.5vh] text-white">
+                <h3 className="text-body-lg uppercase font-semibold font-light mb-[1.5vh] text-white">
                   {item.title}
                 </h3>
-                <p className="text-white/80 text-[1.2vw] leading-[1.6] mb-[1vh]">
+                <p className="text-white/80 text-body-sm leading-[1.6] mb-[1vh]">
                   {item.content}
                 </p>
-                <p className="text-white/50 text-[.9vw]">{item.subContent}</p>
+                <p className="text-white/40 text-[.9vw]">{item.subContent}</p>
+
+                <div className="mt-[1.5vh] flex gap-[1vw]">
+                  <FaWordpress className="" />
+                  <FaWordpress />
+                  <FaWordpress />
+                </div>
               </div>
 
               {/* Vertical Line */}
               <div
-                className={`w-[1px] bg-gradient-to-b from-white/50 to-transparent mx-auto self-start h-[30vh] ${
-                  isTop ? "order-2 my-[2vh]" : "order-2 rotate-180 my-[2vh]"
+                className={`w-[1px] bg-gradient-to-b from-white/50 to-transparent mx-auto self-start h-[20vh] ${
+                  isTop ? "order-2 my-[7.7vh]" : "order-2 rotate-180 my-[5.6vh]"
                 }`}
-                style={{ marginLeft: "3vw" }} // Offset line to align nicely
+                style={{ marginLeft: ".5vw" }} // Offset line to align nicely
               ></div>
 
               {/* Dot */}
@@ -154,7 +169,7 @@ export default function ExperienceTimeline() {
                 className={`w-[1vw] h-[.5vw] rounded-full bg-white shadow-[0_0_1vw_rgba(255,255,255,0.5)] z-20 self-start ${
                   isTop ? "order-3" : "order-1"
                 }`}
-                style={{ marginLeft: "2.5vw" }} // Offset dot to align with line
+                style={{ marginLeft: "0vw" }} // Offset dot to align with line
               ></div>
             </div>
           );

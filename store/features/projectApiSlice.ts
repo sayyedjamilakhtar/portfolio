@@ -30,6 +30,7 @@ export const projectsApi = createApi({
         nodes {
           id
           title
+          uri
           featuredImage {
             node {
               filePath

@@ -84,7 +84,7 @@ export default function Services() {
 
       {/* Bento Grid Section  */}
       <div className="w-[95%] m-auto">
-        <div className="max-w-[70vw] mx-auto grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="max-w-[100vw] mx-auto grid grid-cols-1 md:grid-cols-5 gap-4">
           {/* -- Block 1: Left Vertical (Services) -- */}
           {/* Spans 1 column width, 2 rows height */}
           <div className="md:col-span-1 md:row-span-2 min-h-[50vh] bg-[#111111] border border-white/10 rounded-2xl p-6 shadow-2xl shadow-neutral-600/50">
@@ -190,6 +190,10 @@ export default function Services() {
           </div>
 
           {/* -- Block 3: Middle Center (Tech Stack) -- */}
+          {/* Spans 1 columns width */}
+          <div className="md:col-span-1  bg-[#111111] border border-white/10 rounded-2xl p-6"></div>
+
+          {/* -- Block 3: Middle Center (Tech Stack) -- */}
           {/* Spans 2 columns width */}
           <div className="md:col-span-2 min-h-[240px] bg-[#111111] border border-white/10 rounded-2xl p-6">
             {/* Content goes here */}
@@ -213,14 +217,14 @@ export default function Services() {
 
           {/* -- Block 4: Middle Right (Daily Tools) -- */}
           {/* Spans 1 column width */}
-          <div className="md:col-span-1 row-span-2 min-h-[240px] bg-[#111111] border border-white/10 rounded-2xl p-6">
+          <div className="md:col-span-1 row-span-1 min-h-[240px] bg-[#111111] border border-white/10 rounded-2xl p-6">
             {/* Content goes here */}
             <h4 className="mb-[2vh] text-body-sm font-semibold ">Tech Stack</h4>
           </div>
 
           {/* -- Block 5: Bottom Full Width (Philosophy) -- */}
           {/* Spans 4 columns (full width) */}
-          <div className="md:col-span-1 min-h-[200px] bg-[#111111] border border-white/10 rounded-2xl p-6">
+          <div className="md:col-span-1 md:row-span-2 min-h-[200px] bg-[#111111] border border-white/10 rounded-2xl p-6">
             {/* Content goes here */}
             <h4 className="mb-[2vh] text-body-sm font-semibold ">
               Tools Stack
@@ -233,6 +237,24 @@ export default function Services() {
             {/* Content goes here */}
             <h4 className="mb-[2vh] text-body-sm font-semibold ">
               Animation and Effect
+            </h4>
+          </div>
+
+          {/* -- Block 5: Bottom Full Width (Philosophy) -- */}
+          {/* Spans 4 columns (full width) */}
+          <div className="md:col-span-1 min-h-[200px] bg-[#111111] border border-white/10 rounded-2xl p-6">
+            {/* Content goes here */}
+            <h4 className="mb-[2vh] text-body-sm font-semibold ">
+              Tools Stack
+            </h4>
+          </div>
+
+          {/* -- Block 5: Bottom Full Width (Philosophy) -- */}
+          {/* Spans 4 columns (full width) */}
+          <div className="md:col-span-1 min-h-[200px] bg-[#111111] border border-white/10 rounded-2xl p-6">
+            {/* Content goes here */}
+            <h4 className="mb-[2vh] text-body-sm font-semibold ">
+              Tools Stack
             </h4>
           </div>
         </div>

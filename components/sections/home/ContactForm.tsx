@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import FormButon from "@/components/ui/FormButon";
+import FormButon from "@/components/ui/FormButton";
 
 export default function ContactForm() {
   type contactProps = {
@@ -84,7 +84,7 @@ export default function ContactForm() {
             className="text-[1vw]  border-b-1 py-[1.1vh] focus:outline-0"
           />
           {/* <button className="">Let's build a great website</button> */}
-          <FormButon />
+          <FormButon>Let's build a great website</FormButon>
         </div>
       </form>
     </div>

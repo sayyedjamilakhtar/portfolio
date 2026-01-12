@@ -25,6 +25,7 @@ export type ProjectCategories = {
 export type Project = {
   id: string;
   title: string;
+  uri: string;
   featuredImage?: FeaturedImage | null;
   projectCategories?: ProjectCategories;
 };

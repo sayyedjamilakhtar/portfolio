@@ -25,15 +25,11 @@ export default function CategoriesTabs({
     } else {
       setActiveCategory((e.target as HTMLElement).textContent);
     }
-
-    // if ((e.target as HTMLElement).textContent == activeCategory) {
-    //   console.log("active");
-    // }
   };
 
   return (
     <div className="pb-[5vh]">
-      <div className="flex flex-wrap gap-[1vw]">
+      <div className="flex flex-wrap gap-2 lg:gap-[1vw]">
         <button
           onClick={handleClick}
           className={`${
