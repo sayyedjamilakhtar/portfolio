@@ -102,7 +102,6 @@ const TextImplosion: React.FC = () => {
       id="about"
       className="pt-[6vh] relative w-full bg-neutral-900 text-white overflow-hidden"
     >
-      {/* The Animation Container */}
       <div className="w-[95%] m-auto">
         <div className="absolute pt-[6vh] right-10 flex flex-col items-center">
           <p
@@ -116,14 +115,15 @@ const TextImplosion: React.FC = () => {
         </div>
         <h2 className="text-fluid font-bold">About Me</h2>
       </div>
+      {/* The Animation Container */}
       <div
         ref={containerRef}
-        className="h-screen w-full flex items-center justify-center overflow-hidden"
+        className="h-[100vh] lg:h-screen w-full flex items-center justify-center overflow-hidden"
       >
-        <div className="max-w-[79vw] perspective-1400">
+        <div className="max-w-[90%] lg:max-w-[79vw] perspective-1400">
           <p
             ref={textRef}
-            className="text-[2.91vw] font-light leading-tight text-left"
+            className="text-body-lg lg:text-[2.91vw] font-light leading-tight text-left"
             style={{ perspective: "1400px" }} // Adds 3D depth context
           >
             {splitText}

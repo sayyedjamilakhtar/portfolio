@@ -10,7 +10,7 @@ export default function CategoriesTabs({
   categories: Category[];
 }) {
   const dispatch = useDispatch();
-  const [activeCategory, setActiveCategory] = useState("");
+  const [activeCategory, setActiveCategory] = useState("All");
 
   useEffect(() => {
     dispatch(updateCategory(activeCategory));

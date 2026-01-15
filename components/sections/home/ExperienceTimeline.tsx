@@ -1,7 +1,7 @@
 "use client";
-import { FaWordpress } from "react-icons/fa6";
 
 import React, { useRef, useLayoutEffect } from "react";
+import Image from "next/image";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -9,13 +9,30 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-const timelineData = [
+type data = {
+  id: number;
+  year: string;
+  title: string;
+  content: string;
+  subContent: string;
+  logos?: string[];
+};
+
+const timelineData: data[] = [
   {
     id: 1,
     year: "2019",
     title: "How it started",
-    content: "I began my career building websites with WordPress and Divi.",
+    content:
+      "I began my career building websites with WordPress, Divi and Elementor.",
     subContent: "Learned the entire project lifecycle.",
+    logos: [
+      "/images/logos/wordpress.png",
+      "/images/logos/woocommerce.png",
+      "/images/logos/divi.png",
+      "/images/logos/Elementor.png",
+      "/images/logos/acf.png",
+    ],
   },
   {
     id: 2,
@@ -23,6 +40,11 @@ const timelineData = [
     title: "Growth phase",
     content: "Expanded into React, Next.js, and advanced JavaScript.",
     subContent: "Building complex, interactive applications.",
+    logos: [
+      "/images/logos/React.png",
+      "/images/logos/next_js.png",
+      "/images/logos/Typescript.png",
+    ],
   },
   {
     id: 3,
@@ -30,6 +52,7 @@ const timelineData = [
     title: "Team collaboration",
     content: "Joined RedConic as a Front-End Developer.",
     subContent: "Collaborating with designers and stakeholders.",
+    logos: ["/images/logos/RedConic-Digital-Solutions-logo.png"],
   },
   {
     id: 4,
@@ -37,6 +60,11 @@ const timelineData = [
     title: "Current focus",
     content: "Sharpening skills in animations and backend.",
     subContent: "Focusing on performance and architecture.",
+    logos: [
+      "/images/logos/node.png",
+      "/images/logos/expressjs.png",
+      "/images/logos/gsap.png",
+    ],
   },
 ];
 
@@ -150,16 +178,24 @@ export default function ExperienceTimeline() {
                 <p className="text-white/40 text-[.9vw]">{item.subContent}</p>
 
                 <div className="mt-[1.5vh] flex gap-[1vw]">
-                  <FaWordpress className="" />
-                  <FaWordpress />
-                  <FaWordpress />
+                  {item.logos &&
+                    item.logos.map((logo, idx) => (
+                      <Image
+                        className="bg-white rounded-full p-[.2vw]"
+                        key={idx}
+                        src={logo}
+                        width={logo.includes("RedConic") ? 165 : 55}
+                        height={55}
+                        alt={`${item.title} logo ${idx}`}
+                      />
+                    ))}
                 </div>
               </div>
 
               {/* Vertical Line */}
               <div
                 className={`w-[1px] bg-gradient-to-b from-white/50 to-transparent mx-auto self-start h-[20vh] ${
-                  isTop ? "order-2 my-[7.7vh]" : "order-2 rotate-180 my-[5.6vh]"
+                  isTop ? "order-2 my-[1.9vh]" : "order-2 rotate-180 -my-[.2vh]"
                 }`}
                 style={{ marginLeft: ".5vw" }} // Offset line to align nicely
               ></div>
