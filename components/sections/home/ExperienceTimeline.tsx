@@ -181,12 +181,12 @@ export default function ExperienceTimeline() {
                   {item.logos &&
                     item.logos.map((logo, idx) => (
                       <Image
-                        className="bg-white rounded-full p-[.2vw]"
+                        className="bg-white text-black text-[12px] rounded-full p-[.2vw]"
                         key={idx}
                         src={logo}
                         width={logo.includes("RedConic") ? 165 : 55}
                         height={55}
-                        alt={`${item.title} logo ${idx}`}
+                        alt={`${item.title}-logo-${idx}`}
                       />
                     ))}
                 </div>
