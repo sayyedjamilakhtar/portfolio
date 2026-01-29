@@ -1,20 +1,10 @@
-import React, { ReactNode } from "react";
-import { FiSearch } from "react-icons/fi";
-import { IoColorPalette } from "react-icons/io5";
-import { FaCode } from "react-icons/fa6";
-import { MdElectricBolt } from "react-icons/md";
-import { HiRocketLaunch } from "react-icons/hi2";
-import { MdOutlineDesignServices } from "react-icons/md";
-import { FaDatabase } from "react-icons/fa6";
-import { FaWordpress } from "react-icons/fa6";
-import { CgPerformance } from "react-icons/cg";
-import { FaCircleCheck } from "react-icons/fa6";
 import Image from "next/image";
 import AnimationGrid from "./bentoGrids/AnimationGrid";
 import ServicesGrid from "./bentoGrids/ServicesGrid";
 import ProcessGrid from "./bentoGrids/ProcessGrid";
+import WhyChooseGrid from "./bentoGrids/WhyChooseGrid";
 
-export default function Services() {
+export default function Bento() {
   const techStack: string[] = [
     "React",
     "Next.js",
@@ -32,74 +22,6 @@ export default function Services() {
     "WPGraphQL",
     "Git",
     "Vercel",
-  ];
-
-  type Service = {
-    heading: string;
-    subHeading: string;
-    icon?: ReactNode;
-  };
-
-  type Why = {
-    heading: string;
-    subHeading: string;
-    icon?: ReactNode;
-  };
-
-  const services: Service[] = [
-    {
-      heading: "Web Design",
-      subHeading: "UI/UX, Branding, Systems",
-      icon: <MdOutlineDesignServices />,
-    },
-    {
-      heading: "Frontend Dev",
-      subHeading: "React, Next.js, Typescript",
-      icon: <FaCode />,
-    },
-    {
-      heading: "Full-Stack Apps",
-      subHeading: "MERN Stack, Serverless",
-      icon: <FaDatabase />,
-    },
-    {
-      heading: "WordPress",
-      subHeading: "Custom Build, No-code solutions",
-      icon: <FaWordpress />,
-    },
-    {
-      heading: "Performance",
-      subHeading: "SEO, Core Web Vitals",
-      icon: <CgPerformance />,
-    },
-  ];
-
-  const whyChooseMe: Why[] = [
-    {
-      heading: "Clean & Scalable Code",
-      subHeading: "Built for long-term growth",
-      icon: <FaCircleCheck />,
-    },
-    {
-      heading: "Performance Focused",
-      subHeading: "Lightning fast loads",
-      icon: <FaCircleCheck />,
-    },
-    {
-      heading: "Pixel Perfect UI",
-      subHeading: "Every design detail implemented exactly as intended",
-      icon: <FaCircleCheck />,
-    },
-    {
-      heading: "No-Code Experience",
-      subHeading: "Wordpress website design and development",
-      icon: <FaCircleCheck />,
-    },
-    {
-      heading: "Fully Responsive",
-      subHeading: "Seamless experience across all devices and modern browsers.",
-      icon: <FaCircleCheck />,
-    },
   ];
 
   const mySetup = [
@@ -215,7 +137,7 @@ export default function Services() {
                 Have a project in mind? Book a Discovery Call.
               </p>
               <button className="text-button bg-white text-black border-1 border-white rounded-full py-[.8vh] px-[1vw] hover:bg-transparent hover:text-white">
-                Let's Work Together
+                Lets Work Together
               </button>
             </div>
           </div>
@@ -223,30 +145,9 @@ export default function Services() {
           {/* -- Block 5: Bottom Full Width (Why Choose Me) -- */}
           {/* Spans 4 columns (full width) */}
           <div className="col-span-2 md:row-span-2 min-h-[200px] bg-[#111111] border border-white/10 rounded-xl py-[3vh] px-[2vw]">
-            {/* Content goes here */}
-            <h4 className="mb-[3vh] text-body-sm font-semibold ">
-              Why Choose Me
-            </h4>
-
-            {/* WhyChoose list  */}
-            <div className="flex flex-col gap-[3vh]">
-              {whyChooseMe.map((item, key) => {
-                return (
-                  <div key={key} className="flex gap-[.5vw]">
-                    <div className="text-green-500 text-[18px]">
-                      {item.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-[.9vw] -mt-[.7vh]">{item.heading}</h3>
-                      <p className="text-[.7vw] text-neutral-500">
-                        {item.subHeading}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+          <WhyChooseGrid />
           </div>
+          
 
           {/* -- Block 6: Bottom Full Width (Philosophy) -- */}
           {/* Spans 4 columns (full width) */}
