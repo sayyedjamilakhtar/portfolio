@@ -181,7 +181,7 @@ export default function ExperienceTimeline() {
                   {item.logos &&
                     item.logos.map((logo, idx) => (
                       <Image
-                        className="bg-white text-black text-[12px] rounded-full p-[.2vw]"
+                        className={`${logo.includes("RedConic") ? "w-[6.5vw]" : "w-[2.2vw]"} bg-white/80 text-black text-[12px] rounded-full p-[.2vw]`}
                         key={idx}
                         src={logo}
                         width={logo.includes("RedConic") ? 165 : 55}

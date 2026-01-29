@@ -14,10 +14,13 @@
   --text-fluid-sm: clamp(2rem, 3vw, 3vw);
   --text-fluid-md: clamp(2.7rem, 6vw, 6vw);
   --text-fluid-lg: clamp(5rem, 12vw, 12vw);
-  
+
   --text-body-sm: clamp(1rem, 1vw, 1vw);
   --text-body-md: clamp(1.5rem, 1.5vw, 1.5vw);
   --text-body-lg: clamp(1.7rem, 2vw, 2vw);
+
+  --text-button: clamp(16px, 0.8vw, 0.8vw);
+  --text-button-sm: clamp(12px, 0.6vw, 0.6vw);
 }
 
 @media (prefers-color-scheme: dark) {
