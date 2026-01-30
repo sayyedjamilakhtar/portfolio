@@ -30,5 +30,3 @@ export default function Work() {
     </div>
   );
 }
-
-// public\images\homeProjects\eacrosse.co.uk.png

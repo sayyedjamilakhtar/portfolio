@@ -8,7 +8,7 @@ import HoverLink from "../ui/HoverLink";
 export default function Navbar() {
   return (
     <>
-      <div className="py-[3vh] fixed top-0 left-0 w-full bg-neutral-100/95 z-999999">
+      <div className="py-[3vh] fixed top-0 left-0 w-full bg-neutral-100/95 z-999">
         <div className="flex items-center justify-between w-[95%] m-auto">
           <Link href="/#home">
             <h1 className="group text-body-md font-medium uppercase tracking-tight relative">

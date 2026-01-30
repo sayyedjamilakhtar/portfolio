@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import Providers from "./Providers";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Preloader from "@/components/ui/Preloader";
 
 const fontHeading = Poppins({
   subsets: ["latin"],
@@ -47,6 +48,7 @@ export default function RootLayout({
       <body
         className={`${fontHeading.variable} ${fontBody.variable} antialiased`}
       >
+        <Preloader />
         <Providers>
           <SmoothScroll>
             <Navbar />

@@ -14,14 +14,13 @@ import Link from "next/link";
 
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 export default function ProjectsGrid() {
   const baseUrl = process.env.NEXT_PUBLIC_WORDPRESS_URL;
 
   //Getting active category from filterable projects
   const activeCategory: string = useAppSelector(
-    (state) => state.activeCategory.value
+    (state) => state.activeCategory.value,
   );
 
   //State to manage how many items are visible
