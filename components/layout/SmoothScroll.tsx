@@ -1,67 +1,76 @@
 "use client";
 
 import { useEffect, type ReactNode } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 interface SmoothScrollProps {
   children: ReactNode;
 }
 
 export default function SmoothScroll({ children }: SmoothScrollProps) {
+  const pathname = usePathname();
+
   useEffect(() => {
+    // 1. Initialize Lenis
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      // smoothTouch: false,
     });
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+    // 2. Integrate Lenis with GSAP ScrollTrigger
+    // This tells ScrollTrigger to use Lenis's scroll position instead of the browser's
+    lenis.on("scroll", ScrollTrigger.update);
 
-    requestAnimationFrame(raf);
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
 
-    // --- ADDED: Handle Anchor Links ---
+    gsap.ticker.lagSmoothing(0);
+
+    // 3. Handle Route Changes (Fixes your "opening at last position" issue)
+    // When pathname changes, we force Lenis to the top immediately
+    lenis.scrollTo(0, { immediate: true });
+
+    // Give the DOM a moment to paint, then refresh GSAP
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
+
+    // 4. Handle Anchor Links (Existing logic)
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      const link = target.closest("a"); // Ensure we catch clicks on inner elements like spans/icons
+      const link = target.closest("a");
 
       if (link) {
         const href = link.getAttribute("href");
-
-        // Check if the link is an anchor link (e.g., "#contact" or "/#contact")
         if (href?.includes("#")) {
           const [path, hash] = href.split("#");
-
-          // Only intercept if:
-          // 1. It's a pure hash link (starts with #)
-          // 2. OR it matches the current path (e.g. clicking /#contact while on /)
           const isSamePage = path === "" || path === window.location.pathname;
 
           if (isSamePage && hash) {
             const targetElement = document.getElementById(hash);
-
             if (targetElement) {
-              e.preventDefault(); // STOP the default browser jump
-              lenis.scrollTo(targetElement, {
-                offset: 0, // Adjust this if you have a fixed header (e.g., -80)
-              });
+              e.preventDefault();
+              lenis.scrollTo(targetElement);
             }
           }
         }
       }
     };
 
-    // Listen to all clicks on the document
     document.addEventListener("click", handleAnchorClick);
 
     return () => {
       lenis.destroy();
-      document.removeEventListener("click", handleAnchorClick); // Clean up listener
+      gsap.ticker.remove((time) => lenis.raf(time * 1000));
+      document.removeEventListener("click", handleAnchorClick);
+      clearTimeout(timer);
     };
-  }, []);
+  }, [pathname]); // Pathname dependency is the key fix
 
   return <>{children}</>;
 }

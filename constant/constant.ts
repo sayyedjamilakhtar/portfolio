@@ -11,7 +11,7 @@ export const NavLink = [
   },
   {
     id: 3,
-    url: "/work/#work",
+    url: "/work",
     label: "My Work",
   },
 ];
