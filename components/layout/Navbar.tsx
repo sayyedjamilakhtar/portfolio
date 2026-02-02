@@ -4,7 +4,7 @@ import PhoneMenu from "./PhoneMenu";
 import Link from "next/link";
 import { NavLink } from "@/constant/constant";
 import HoverLink from "../ui/HoverLink";
-import PageLink from "@/app/pageLink";
+import PageLink from "@/components/helper/pageLink";
 
 export default function Navbar() {
   return (

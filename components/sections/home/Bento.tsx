@@ -52,7 +52,10 @@ export default function Bento() {
   ];
 
   return (
-    <div id="services" className="py-[10vh] bg-neutral-900 text-white">
+    <div
+      id="services"
+      className="py-[10vh] bg-neutral-900 text-white hidden md:block"
+    >
       {/* Bento Grid Section  */}
       <div className="w-[95%] m-auto">
         <div className="max-w-[100vw] mx-auto grid grid-cols-1 md:grid-cols-10 gap-4">
@@ -145,9 +148,8 @@ export default function Bento() {
           {/* -- Block 5: Bottom Full Width (Why Choose Me) -- */}
           {/* Spans 4 columns (full width) */}
           <div className="col-span-2 md:row-span-2 min-h-[200px] bg-[#111111] border border-white/10 rounded-xl py-[3vh] px-[2vw]">
-          <WhyChooseGrid />
+            <WhyChooseGrid />
           </div>
-          
 
           {/* -- Block 6: Bottom Full Width (Philosophy) -- */}
           {/* Spans 4 columns (full width) */}

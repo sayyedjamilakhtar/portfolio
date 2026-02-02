@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/layout/Navbar";
-import SmoothScroll from "@/components/layout/SmoothScroll";
+import SmoothScroll from "@/components/helper/SmoothScroll";
 import Footer from "@/components/layout/Footer";
 import Providers from "./Providers";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Preloader from "@/components/ui/Preloader";
+import Preloader from "@/components/helper/Preloader";
 
 const fontHeading = Poppins({
   subsets: ["latin"],

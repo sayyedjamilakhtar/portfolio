@@ -3,8 +3,8 @@ import HoverLink from "../ui/HoverLink";
 
 export default function Footer() {
   return (
-    <div className="pt-[10vh] lg:h-[90vh] lg:py-[10vh] bg-neutral-900 text-white overflow-hidden">
-      <div className="w-[95%] pb-[15vh] m-auto grid lg:grid-cols-3 gap-[3vh]">
+    <div className="sticky pt-[10vh] lg:h-[77vh] lg:py-[10vh] bg-neutral-900 text-white overflow-hidden">
+      <div className="w-[95%] pb-25 md:pb-[15vh] m-auto grid lg:grid-cols-3 gap-[3vh]">
         {/* email part  */}
         <div>
           <h4 className="text-body-md mb-[1vh]">Let’s talk!</h4>
@@ -37,7 +37,7 @@ export default function Footer() {
       </div>
 
       <div className="w-[100%] m-auto lg:-mt-[4vh]">
-        <h3 className="text-[13.5vw] font-semibold text-center uppercase opacity-[.2]">
+        <h3 className="text-[13.5vw] tracking-tight md:tracking-normal font-semibold text-center uppercase opacity-[.2]">
           Jamil Akhtar
         </h3>
       </div>
