@@ -1,7 +1,6 @@
 import React from "react";
 import NavButton from "../ui/NavButton";
 import PhoneMenu from "./PhoneMenu";
-import Link from "next/link";
 import { NavLink } from "@/constant/constant";
 import HoverLink from "../ui/HoverLink";
 import PageLink from "@/components/helper/pageLink";

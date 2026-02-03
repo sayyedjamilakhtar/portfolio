@@ -3,7 +3,7 @@ import HoverLink from "../ui/HoverLink";
 
 export default function Footer() {
   return (
-    <div className="sticky pt-[10vh] lg:h-[77vh] lg:py-[10vh] bg-neutral-900 text-white overflow-hidden">
+    <div className=" pt-[10vh] lg:h-[90vh] lg:py-[10vh] bg-neutral-900 text-white overflow-hidden">
       <div className="w-[95%] pb-25 md:pb-[15vh] m-auto grid lg:grid-cols-3 gap-[3vh]">
         {/* email part  */}
         <div>

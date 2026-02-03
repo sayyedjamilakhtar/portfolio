@@ -52,8 +52,8 @@ export default function ServicesGrid() {
             <div key={service.heading} className="flex gap-[.5vw]">
               {service.icon}
               <div>
-                <h3 className="text-[.9vw] -mt-[.5vh]">{service.heading}</h3>
-                <p className="text-[.7vw] text-neutral-500">
+                <h3 className="text-body-xs -mt-[.5vh]">{service.heading}</h3>
+                <p className="text-[clamp(12px,0.7vw,0.7vw)] text-neutral-500">
                   {service.subHeading}
                 </p>
               </div>
