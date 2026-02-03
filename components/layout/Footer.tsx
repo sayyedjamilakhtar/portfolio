@@ -10,7 +10,7 @@ export default function Footer() {
           <h4 className="text-body-md mb-[1vh]">Let’s talk!</h4>
           <a href="mailto:sayyedjamilakhtar@gmail.com">
             <span className="relative group cursor flex flex-col items-center gap-[0.5vw] text-[1vw] inline-flex">
-              <span className="text-fluid-sm font-normal group-hover:text-neutral-400">
+              <span className="text-2xl md:text-fluid-sm font-normal group-hover:text-neutral-400">
                 sayyedjamilakhtar@gmail.com
               </span>
               <span className="absolute -bottom-[0.3vh] left-0 w-[100%] h-[0.3vh] bg-neutral-900 group-hover:bg-neutral-400 origin-left underline-animate"></span>

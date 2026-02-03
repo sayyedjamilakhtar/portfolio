@@ -13,7 +13,7 @@
   --text-fluid: clamp(3rem, 8vw, 8vw);
   --text-fluid-sm: clamp(2rem, 3vw, 3vw);
   --text-fluid-md: clamp(2.7rem, 6vw, 6vw);
-  --text-fluid-lg: clamp(5rem, 12vw, 12vw);
+  --text-fluid-lg: clamp(4rem, 12vw, 12vw);
 
   --text-body-xs: clamp(14px, 0.9vw, 0.9vw);
   --text-body-sm: clamp(1rem, 1vw, 1vw);

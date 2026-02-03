@@ -16,7 +16,7 @@ export default function FormButton({
     <button
       type="button"
       onClick={onClick}
-      className={`border pt-3 w-[70%] m-auto pb-1 relative group cursor-pointer flex items-center justify-center gap-5 uppercase text-body-sm rounded-full ${className}`}
+      className={`border px-5 pt-3 md:w-[70%] m-auto pb-1 relative group cursor-pointer flex items-center justify-center gap-5 uppercase text-body-sm rounded-full ${className}`}
     >
       <HoverLink>{children as string}</HoverLink>
     </button>
